@@ -64,6 +64,10 @@ html{
 #boton:active{
 	border:1px solid #55205e;	
 }
+/*pagina de configuracion*/
+.central{
+	margin-top: 5%;
+}
 /*estilos para la pagina de inicio y perfil*/
 * {
 	margin: 0;
@@ -590,3 +594,44 @@ div.user_menu .active{
 	padding-top:5px;
 	padding-bottom:5px;	
 }
+
+/*configuración*/
+
+/* parte izquierda de la pagina*/
+.izquierda{
+	margin:0;
+	}
+.tabla{
+	margin:0;
+	width:100%;
+	}
+.tabla tr{
+	width:100%
+}
+	
+.tabla tr td{
+	margin:0;
+	padding:5%;
+	width:100%;
+}
+/* color para enlaces #E0E0E0*/
+.tabla tr td:hover{	
+	background:#E0E0E0;
+	padding:5%;
+	width:100%;
+}
+.tabla tr td a{
+	text-decoration:none;
+	padding:5%;
+	display:block;
+}
+.tabla tr td a:hover{
+	padding:5%;
+	text-decoration:none;
+	display:block;
+}
+
+/*Parte central*/
+.titulo{
+	text-align:center;
+	}

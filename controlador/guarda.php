@@ -1,6 +1,5 @@
 <?php
-	
-	//Como el elemento es un arreglos utilizamos foreach para extraer todos los valores
+	/*//Como el elemento es un arreglos utilizamos foreach para extraer todos los valores
 	foreach($_FILES["archivo"]['tmp_name'] as $key => $tmp_name)
 	{
 		//Validamos que el archivo exista
@@ -27,5 +26,26 @@
 			}
 			closedir($dir); //Cerramos el directorio de destino
 		}
-	}
+	}*/
+	$formatos = array('.mkv','.rar','.JPG','.MPEG-4','.wmv','.sh','.jpg','.png','.doc','.mp3','.pdf','.xls','.mp4','.flv','.avi','.mpg','.docx','.xlsx','.txt','.xlsm','.pptx');                                                
+	$carpeta= '../material';                                                        
+	$contArchivos = 0;                                                              
+	if(isset($_POST['boton'])){                                                     
+		$nombreArchivo = $_FILES['archivo']['name'];                                    
+		$nombreTmpArchivo = $_FILES['archivo']['tmp_name'];                             
+		$ext = substr($nombreArchivo, strrpos($nombreArchivo,'.'));                     
+		if (in_array($ext, $formatos)){                                                 
+			if(move_uploaded_file($nombreTmpArchivo, "../material/$nombreArchivo")){           				
+				echo '<script language="javascript">alert("'.$nombreArchivo.' subido correctamente");</script>';
+				echo '<script language="JavaScript">location.href = "../archivos.php"</script>';
+				//header('Location: ../archivos.php');
+			}                                                                               
+			else{                                                                           				 
+				echo '<script language="javascript">alert("Ocurrio un error, vuelva a intentarlo");</script>';
+			}                                                                               
+		}                                                                               
+		else{ 
+		echo '<script language="javascript">alert("Archivo no permitido");</script>';
+		}                                                                               
+	}                               
 ?>

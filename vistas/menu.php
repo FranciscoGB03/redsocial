@@ -14,6 +14,7 @@
 		<li class="menu_option option"><a href="inicio.php">Datos</a></li>
 		<li class="option"><a href="perfil.php">Perfil</a></li>		
 		<li <?php echo $cadena; ?> class="option"><a href="configuracion.php">Configuración</a></li>
+		<li <?php echo $cadena2;?> class="option"><a href="materiales.php">Material</a></li>		
 		<li class="option"><a href="controlador/cerrarSesion.php">Cerrar Sesión</a></li>
 	</ul>
 </nav>

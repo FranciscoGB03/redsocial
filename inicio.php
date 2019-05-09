@@ -11,7 +11,7 @@
 	?>
 </head>
 <body>
-	<header>
+	<header class="sticky-top">
 		<?php
 			include("vistas/menu.php");
 		?>
